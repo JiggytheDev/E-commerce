@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="main-logo">
+        <div class="hamburger-menu" id="hamburgerMenu">
+          <img src="images/icon-menu.svg" alt="">
+        </div>
+        <h1>Sneakers</h1>
+        <div class="list" id="mobileList">
+          <li><img src="images/icon-close.svg" alt="" id="mobileCancelButton"></li>
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </div>
+      </div>
+      <div class="cart">
+        <img src="images/icon-cart.svg" alt="" id="cartClicked">
+        <span id="cartCount"></span>
+        <img src="images/image-avatar.png" alt="" height="40px" width="40px">
+        <div class="checkout" id="checkout">
+          <h3>Cart <span id="checkoutCancel"><img src="images/icon-close.svg" alt=""></span></h3>
+          <div class="checkout-cart">
+            <div class="checkout-details" id="checkoutDetails">
+              <div class="checkout-img"><img src="images/image-product-1-thumbnail.jpg" alt="" width="70px" height="70px"></div>
+              <div class="details-section">
+                <p class="fallSneakers">Fall Limited Edition Sneakers</p>
+                <div class="amount">
+                  <p><span id="promoPrice"></span> x <span id="cartQty"></span></p>
+                  <p class="total" id="totalPrice"></p>
+                </div>
+              </div>
+              <img src="images/icon-delete.svg" alt="" id="cartDelete">
+            </div>
+            <div class="empty-cart" id="emptyCart"></div>
+          </div>
+          <button type="submit" id="submit">Checkout</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-page" id="mainPage">
+    <div class="product-image-section">
+      <div class="box"><img src="images/image-product-1.jpg" alt="" width="400px" height="400px"></div>
+      <div class="box" id="firstBox"><img src="images/image-product-1-thumbnail.jpg" alt="" width="100px" height="100px"></div>
+      <div class="box"><img src="images/image-product-2-thumbnail.jpg" alt="" height="100px" width="100px"></div>
+      <div class="box"><img src="images/image-product-3-thumbnail.jpg" alt="" width="100px" height="100px"></div>
+      <div class="box"><img src="images/image-product-4-thumbnail.jpg" alt="" height="100px" width="100px"></div>
+    </div>
+    <div class="clicked-image" id="clickedImage">
+      <div class="popup">
+        <div class="popup-image">
+          <div class="boxes carousel-container">
+            <div class="carousel" id="carousel">
+              <span class="close" id="closeBtn"><img src="images/icon-close.svg" alt=""></span>
+              <span class="next"><img src="images/icon-next.svg" alt="" ></span>
+              <span class="previous"><img src="images/icon-previous.svg" alt=""></span>
+              <ul class="carousel-track">
+                <li class="carousel-slide">
+                  <img src="images/image-product-1.jpg" alt="">
+                </li>
+                <li class="carousel-slide">
+                  <img src="images/image-product-2.jpg" alt="">
+                </li>
+                <li class="carousel-slide">
+                  <img src="images/image-product-3.jpg" alt="">
+                </li>
+                <li class="carousel-slide">
+                  <img src="images/image-product-4.jpg" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="scroll-boxes">
+            <div class="boxes indicator active">
+              <img src="images/image-product-1-thumbnail.jpg" alt="" width="100px" height="100px">
+            </div>
+            <div class="boxes indicator"><img src="images/image-product-2-thumbnail.jpg" alt="" width="100px" height="100px"></div>
+            <div class="boxes indicator"><img src="images/image-product-3-thumbnail.jpg" alt="" width="100px" height="100px"></div>
+            <div class="boxes indicator"><img src="images/image-product-4-thumbnail.jpg" alt="" width="100px" height="100px"></div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+    <div class="product-details-section">
+      <div class="product-content">
+        <h4>Sneaker Company</h4>
+        <h2>Fall Limited Edition Sneakers</h2>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand  everything the weather an offer.</p>
+        <span class="pricing">
+          <div class="promo-price">
+            <h3>$125.00</h3>
+            <h5>50%</h5>
+          </div>
+          <div class="former-price">
+            <h5>$250.00</h5>
+          </div>
+        </span>
+        <div class="product-purchase">
+          <div class="counter">
+            <div class="minus" id="decrease"><img src="images/icon-minus.svg" alt=""></div>
+            <div class="result" id="qty">0</div>
+            <div class="plus" id="increase"><img src="images/icon-plus.svg" alt=""></div>
+          </div>
+          <div class="carting">
+            <img src="images/icon-cart.svg" alt="" width="17px">
+            <p id="addedCart">Add to cart</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://jiggythedev.github.io/">JiggytheDev</a>.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
